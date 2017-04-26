@@ -1,0 +1,12 @@
+<div style="color:white">
+    A single compartment, (10 μm long, 3.18 μm diameter, 100 μm2 surface area) is being simulated containing a passive leak current (reversal potential -54.3mV) and <a onclick="showModelDescription(Model.neuroml.na);">sodium</a> and <a onclick="showModelDescription(Model.neuroml.k);">potassium</a>    active conductances. To get a feel for the simulation environment go to the I/V Clamp Electrode window, select IClamp (current clamp mode). The parameters for the current pulse to be injected to the compartment are shown. To run the simulation click
+    Init & Run on the RunControl Window. The membrane potential, the conductance and current through the Na and K channels are plotted in various windows, which can be resized as appropriate. First work in the IClamp mode: Try altering the parameters
+    for the IClamp. A greater amplitude of injection should lead to a higher firing rate. Try reducing the conductance densities of each of the channels to zero (in the Simulation Parameters window) and see what happens. Note that when you change a value
+    through the GUI (Graphical User Interface) you need to press return to ensure the change.
+    </br>
+    </br>
+    <div class="center">
+        Input current: <input id="currentValue" type="text" value="0.6"></input>
+        <button class="btn" id="changeCurrent" onclick="quickExperiment('Model.neuroml.pulseGen1.amplitude',$('#currentValue').val());">Try!</button>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+{
+    "name": "An introduction to NeuroML 2",
+    "height": "600",
+    "width": "900",
+    "steps": [{
+            "title": "Implementation of HH Model in NeuroML 2",
+            "content_url": "https://dl.dropboxusercontent.com/u/7538688/OSBTutorials/1_hh_neuroml/1.html?dl=1"
+        },
+        {
+            "title": "Implementation of HH Model in NeuroML 2",
+            "content_url": "https://dl.dropboxusercontent.com/u/7538688/OSBTutorials/1_hh_neuroml/2.html?dl=1"
+        }, {
+            "title": "Implementation of HH Model in NeuroML 2",
+            "content_url": "https://dl.dropboxusercontent.com/u/7538688/OSBTutorials/1_hh_neuroml/3.html?dl=1"
+        }, {
+            "title": "Implementation of HH Model in NeuroML 2",
+            "content_url": "https://dl.dropboxusercontent.com/u/7538688/OSBTutorials/1_hh_neuroml/4.html?dl=1"
+        }
+    ]
+}

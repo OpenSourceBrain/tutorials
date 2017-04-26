@@ -1,0 +1,33 @@
+<div style="color:white; font-size: 14px;">
+    <p>Given a surface area of 1000.0 um^2 in the cell the following equation is used to convert from X uA/cm^2 to Y nA:</p>
+    <div class="formula">
+        (XuA ⁄ cm<sup>2</sup>)*(1000.0um<sup>2</sup>)*(1000nA ⁄ uA) ⁄ (1*10<sup>8</sup>um<sup>2</sup> ⁄ cm<sup>2</sup>) = YnA
+    </div>
+    <p>Line 11 can then be translated into the delay, duration and amplitude of the two pulseGenerator objects in <a href='https://github.com/openworm/hodgkin_huxley_tutorial/blob/master/Tutorial/Source/HHCellNetwork.html' target='_blank'>here</a>HHCellNetwork.net.nml</a>:</p>
+    <pre style="font-size: 11px;">
+    &lt;include href=&quot;hhcell.cell.nml&quot;/&gt; &lt;!-- Include the cell definition --&gt;
+
+    &lt;!-- Short small current pulse input &amp; short larger current pulse input --&gt;
+    &lt;pulseGenerator id=&quot;pulseGen1&quot; delay=&quot;100ms&quot; duration=&quot;100ms&quot; amplitude=&quot;0.10nA&quot;/&gt;
+    &lt;pulseGenerator id=&quot;pulseGen2&quot; delay=&quot;300ms&quot; duration=&quot;100ms&quot; amplitude=&quot;0.35nA&quot;/&gt;
+
+    &lt;network id=&quot;HHCellNetwork&quot;&gt;
+
+        &lt;notes&gt;Network with a single cell based on the Hodgkin Huxley model with 2 input currents&lt;/notes&gt;
+    
+        &lt;population id=&quot;hhpop&quot; component=&quot;hhcell&quot; size=&quot;1&quot;/&gt;
+        &lt;explicitInput target=&quot;hhpop[0]&quot; input=&quot;pulseGen1&quot;/&gt;
+        &lt;explicitInput target=&quot;hhpop[0]&quot; input=&quot;pulseGen2&quot;/&gt;
+    &lt;/network&gt;.
+    </pre>
+
+    <h4>Initial Values</h4>
+
+    <p>Is used to define the initial values for the model in <a target='_blank' href='https://github.com/openworm/hodgkin_huxley_tutorial/blob/master/Tutorial/Source/hhcell.cell.nml'>hhcell.cell.nml</a>:</p>
+    <pre style="font-size: 11px;">
+    &lt;initMembPotential value=&quot;-65mV&quot;/&gt;
+    </pre>
+
+    <p>The values for m, h, n at t=0 in LEMS/NML2 are worked out as the steady state values (inf) of each activation variable for the given initial membrane potential. See <a target='_blank' href="http://www.neuroml.org/NeuroML2CoreTypes/Channels.html#gateHHrates">here</a>        for the NML2 implementation (see On Start).</p>
+
+</div>

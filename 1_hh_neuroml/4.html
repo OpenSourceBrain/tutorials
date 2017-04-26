@@ -1,0 +1,39 @@
+<div style="color:white; font-size: 14px;">
+    <h4>Channel Gating Kinetics for Sodium (Na) Channel m</h4>
+    <p>m is the activation variable for the Sodium (Na) Channel.</p>
+    <p>The function that governs the activation of this channel is based on the overall membrane voltage, because the channel opens and closes based on detecting the membrane potential.</p>
+    <p>You can <a target='_blank' href="https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model#Voltage-gated_ion_channels">read more about these variables</a>.</p>
+    <pre style="font-size: 11px;">
+        &lt;gateHHrates id=&quot;m&quot; instances=&quot;3&quot;&gt;
+            &lt;forwardRate type=&quot;HHExpLinearRate&quot; rate=&quot;1per_ms&quot; midpoint=&quot;-40mV&quot; scale=&quot;10mV&quot;/&gt;
+            &lt;reverseRate type=&quot;HHExpRate&quot; rate=&quot;4per_ms&quot; midpoint=&quot;-65mV&quot; scale=&quot;-18mV&quot;/&gt;
+        &lt;/gateHHrates&gt;
+</pre>
+
+
+    <h4>Channel Gating Kinetics for Sodium (Na) Channel h</h4>
+    <p>h is the inactivation variable for the Sodium (Na) Channel. Inactivation is a different state than not being activated, which is called &quot;deactivated&quot;. You can
+        <a target='_blank' href="https://en.wikipedia.org/wiki/Sodium_channel#Gating">read more about how Sodium channel gating works</a>.</p>
+    <p>The function that governs the activation of this channel is based on the overall membrane voltage, because the channel opens and closes based on detecting the membrane potential.</p>
+    <p>You can <a target='_blank' href="https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model#Voltage-gated_ion_channels">read more about these variables</a>.</p>
+    <pre style="font-size: 11px;">
+        &lt;gateHHrates id=&quot;h&quot; instances=&quot;1&quot;&gt;
+            &lt;forwardRate type=&quot;HHExpRate&quot; rate=&quot;0.07per_ms&quot; midpoint=&quot;-65mV&quot; scale=&quot;-20mV&quot;/&gt;
+            &lt;reverseRate type=&quot;HHSigmoidRate&quot; rate=&quot;1per_ms&quot; midpoint=&quot;-35mV&quot; scale=&quot;10mV&quot;/&gt;
+        &lt;/gateHHrates&gt;
+</pre>
+
+    <h4>Channel Gating Kinetics for Potassium (K) channel n</h4>
+    <p>n is the activation variable for the Potassium (K) Channel. The potassium channel does not inactivate, so there is no inactivation variable.</p>
+    <p>The function that governs the activation of this channel is based on the overall membrane voltage, because the channel opens and closes based on detecting the membrane potential.</p>
+    <p>You can <a target='_blank' href="https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model#Voltage-gated_ion_channels">read more about these variables</a>.</p>
+    <pre style="font-size: 11px;">
+        &lt;gateHHrates id=&quot;n&quot; instances=&quot;4&quot;&gt;
+            &lt;forwardRate type=&quot;HHExpLinearRate&quot; rate=&quot;0.1per_ms&quot; midpoint=&quot;-55mV&quot; scale=&quot;10mV&quot;/&gt;
+            &lt;reverseRate type=&quot;HHExpRate&quot; rate=&quot;0.125per_ms&quot; midpoint=&quot;-65mV&quot; scale=&quot;-80mV&quot;/&gt;
+        &lt;/gateHHrates&gt;
+</pre>
+
+
+
+</div>

@@ -1,0 +1,27 @@
+<div style="color:white; font-size: 14px;">
+    The model you are looking at inside Open Source brain is defined in NeuroML 2. The source code can be found <a href='https://github.com/openworm/hodgkin_huxley_tutorial/blob/master/Tutorial/Source/hhcell.cell.nml' target='_blank'>here</a>. NeuroML
+    is a language that provides a common data format for defining and exchanging descriptions of neuronal cell and network models. The current approach in the project uses XML schemas to define the model specifications. NeuroML focuses on models which
+    are based on the biophysical and anatomical properties of real neurons, i.e. which include details of the detailed neuronal morphologies, the membrane conductances which underly action potential generation (conductance based models), and which are
+    based on known anatomical connectivity. A publication describing NeuroML 2 and its underpinning language LEMS, can be found <a href='http://journal.frontiersin.org/article/10.3389/fninf.2014.00079/full' target='_blank'>here</a>.
+
+    <h3>Membrane Properties</h3>
+    NeuroML stores all the details of the biophysical properties of the membrane of the cell in this block:
+    <pre style="font-size: 11px;">
+&lt;membraneProperties&gt;  
+    &lt;channelDensity id=&quot;leak&quot; ionChannel=&quot;passiveChan&quot; condDensity=&quot;0.3 mS_per_cm2&quot; erev=&quot;-54.387mV&quot; ion=&quot;non_specific&quot;/&gt;
+    &lt;channelDensity id=&quot;naChans&quot; ionChannel=&quot;naChan&quot; condDensity=&quot;120.0 mS_per_cm2&quot; erev=&quot;50.0 mV&quot; ion=&quot;na&quot;/&gt;
+    &lt;channelDensity id=&quot;kChans&quot; ionChannel=&quot;kChan&quot; condDensity=&quot;36 mS_per_cm2&quot; erev=&quot;-77mV&quot; ion=&quot;k&quot;/&gt;
+    &lt;spikeThresh value=&quot;-20mV&quot;/&gt;
+    &lt;specificCapacitance value=&quot;1.0 uF_per_cm2&quot;/&gt;
+    &lt;initMembPotential value=&quot;-65mV&quot;/&gt;
+&lt;/membraneProperties&gt;
+        </pre>
+
+    <h4>Membrane Capacitance</h4>
+    <pre style="font-size: 11px;">
+    &lt;specificCapacitance value=&quot;1.0 uF_per_cm2&quot;/&gt;
+</pre>
+    <p>You can <a target='_blank' href="http://www.scholarpedia.org/article/Electrical_properties_of_cell_membranes#Capacitance">read more about the capacitance of a membrane</a>.</p>
+
+
+</div>

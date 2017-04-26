@@ -1,0 +1,31 @@
+<div style="color:white; font-size: 14px;">
+
+    <h4>Sodium (Na) Ion Channel Variables</h4>
+    <pre style="font-size: 11px;">
+    &lt;channelDensity id=&quot;naChans&quot; ionChannel=&quot;naChan&quot; condDensity=&quot;120.0 mS_per_cm2&quot; erev=&quot;50.0 mV&quot; ion=&quot;na&quot;/&gt;
+    </pre>
+    <p>You can <a target='_blank' href="http://www.scholarpedia.org/article/Ion_channels#Bioelectricity_results_from_currents_in_ion_channels">read more about the maximum conductance and reversal potential (zero-current potential) of an ion channel</a>.</p>
+    <h4>Potassium (K) Ion Channel Variables</h4>
+    <pre style="font-size: 11px;">
+    &lt;channelDensity id=&quot;kChans&quot; ionChannel=&quot;kChan&quot; condDensity=&quot;36 mS_per_cm2&quot; erev=&quot;-77mV&quot; ion=&quot;k&quot;/&gt;
+    </pre>
+
+    <p>You can <a target='_blank' href="http://www.scholarpedia.org/article/Ion_channels#Bioelectricity_results_from_currents_in_ion_channels">read more about the maximum conductance and reversal potential (zero-current potential) of an ion channel</a>.</p>
+    <h4>Passive Leak Channel Variables</h4>
+    <pre style="font-size: 11px;">
+    &lt;channelDensity id=&quot;leak&quot; ionChannel=&quot;passiveChan&quot; condDensity=&quot;0.3 mS_per_cm2&quot; erev=&quot;-54.387mV&quot; ion=&quot;non_specific&quot;/&gt;
+    </pre>
+    <h4>Input Current / Input Current Density</h4>
+
+    <p>By using a given surface area of 1000.0 um^2 in the cell, it makes the conversion from uA/cm^2 to nA easier.</p>
+    <div class="formula">
+        Surface Area = 4*pi*(radius)<sup>2</sup> = 4*pi*(diameter ⁄ 2)<sup>2</sup> = 4*pi*(17.841242 ⁄ 2)<sup>2</sup> = 4*pi*(8.920621)<sup>2</sup> = 1000um<sup>2</sup>
+    </div>
+    <pre style="font-size: 11px;">
+    &lt;segment id=&quot;0&quot; name=&quot;soma&quot;&gt;
+        &lt;proximal x=&quot;0&quot; y=&quot;0&quot; z=&quot;0&quot; diameter=&quot;17.841242&quot;/&gt; &lt;!--Gives a convenient surface area of 1000.0 um^2--&gt;
+        &lt;distal x=&quot;0&quot; y=&quot;0&quot; z=&quot;0&quot; diameter=&quot;17.841242&quot;/&gt;
+    &lt;/segment&gt;
+    </pre>
+
+</div>
