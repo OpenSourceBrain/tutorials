@@ -13,7 +13,7 @@
       id="neuroml"
       name="NeuroML">
     <types xsi:type="gep_1:ImportType"
-        id="net1"
+        id="HHTutorial"
         url="https://raw.githubusercontent.com/tarelli/tutorials/master/models/hodgkinHuxley/HHTutorial.net.nml"
         referenceURL="hhcell"
         modelInterpreterId="lemsModelInterpreter"/>
