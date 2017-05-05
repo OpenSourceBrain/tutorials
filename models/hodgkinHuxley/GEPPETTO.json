@@ -1,24 +1,37 @@
-{ "activeExperimentId" : 1,
-  "experiments" : [ { "aspectConfigurations" : [ { "instance" : "hhcell",
-              "simulatorConfiguration" : { "conversionServiceId" : "lemsConversion",
-                  "id" : 1,
-                  "length" : 0.15,
-                  "parameters" : { "target" : "net1" },
-                  "simulatorId" : "neuronSimulator",
-                  "timestep" : 5.0e-05
-                },
-              "watchedVariables" : [ "hhcell.hhpop[0].v"  ]
-            } ],
-        "description" : "The Hodgkin-Huxley model (or conductance-based model) is a mathematical model that describes how action potentials in neurons are initiated and propagated. It is a set of nonlinear differential equations that approximates the electrical characteristics of excitable cells such as neurons.",
-        "id" : 1,
-        "lastModified" : "1436102517799",
-        "name" : "Hodgkin-Huxley Tutorial",
-        "status" : "DESIGN"
-      } ],
-  "geppettoModel" : { "id" : 1,
-      "type" : "GEPPETTO_PROJECT",
-      "url" : "/GeppettoModel.xmi"
-    },
-  "id" : 1,
-  "name" : "Hodgkin-Huxley Tutorial"
+{
+  "activeExperimentId": 1,
+  "experiments": [
+    {
+      "aspectConfigurations": [
+        {
+          "instance": "hhcell",
+          "simulatorConfiguration": {
+            "conversionServiceId": "lemsConversion",
+            "id": 1,
+            "length": 0.15,
+            "parameters": {
+              "target": "HHTutorial"
+            },
+            "simulatorId": "neuronSimulator",
+            "timestep": 5.0e-05
+          },
+          "watchedVariables": [
+            "hhcell.hhpop[0].v"
+          ]
+        }
+      ],
+      "description": "The Hodgkin-Huxley model (or conductance-based model) is a mathematical model that describes how action potentials in neurons are initiated and propagated. It is a set of nonlinear differential equations that approximates the electrical characteristics of excitable cells such as neurons.",
+      "id": 1,
+      "lastModified": "1436102517799",
+      "name": "Hodgkin-Huxley Tutorial",
+      "status": "DESIGN"
+    }
+  ],
+  "geppettoModel": {
+    "id": 1,
+    "type": "GEPPETTO_PROJECT",
+    "url": "/GeppettoModel.xmi"
+  },
+  "id": 1,
+  "name": "Hodgkin-Huxley Tutorial"
 }
