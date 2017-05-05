@@ -4,7 +4,7 @@
     {
       "aspectConfigurations": [
         {
-          "instance": "hhcell",
+          "instance": "HHTutorial",
           "simulatorConfiguration": {
             "conversionServiceId": "lemsConversion",
             "id": 1,
@@ -16,7 +16,7 @@
             "timestep": 5.0e-05
           },
           "watchedVariables": [
-            "hhcell.hhpop[0].v"
+            "HHTutorial.hhpop[0].v"
           ]
         }
       ],
