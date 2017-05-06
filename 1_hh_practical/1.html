@@ -5,14 +5,14 @@
     </br>
     </br>
     <div class="center">
-        Input current (mV): <input id="currentValue" type="text" value="0.6"></input></br>
-        k conductance (pS): <input id="kValue" type="text" value="10"></input></br>
-        na conductance (pS): <input id="naValue" type="text" value="10"></input></br>
+        <b>Input current (nA)</b> <input id="currentValue" type="text" value="0.6"></input></br>
+        <b>k conductance density (S/cm<sup>2</sup>)<b/> <input id="kValue" type="text" value="0.036"></input></br>
+        <b>na conductance density (S/cm<sup>2</sup>)</b> <input id="naValue" type="text" value="0.12"></input></br>
         <button class="btn" id="changeCurrent" onclick="quickExperiment('Inject',
             {
                 ['i']:{'Model.neuroml.IClamp.amplitude':$('#currentValue').val()},
-                ['k']:{'Model.neuroml.kChan.conductance':$('#kValue').val()},
-                ['na']:{'Model.neuroml.naChan.conductance':$('#naValue').val()}
+                ['k']:{'hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
+                ['na']:{'hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
             });">Try!</button>
     </div>
 </div>
