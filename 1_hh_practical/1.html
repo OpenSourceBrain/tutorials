@@ -11,8 +11,8 @@
         <button class="btn" id="changeCurrent" onclick="quickExperiment('Inject',
             {
                 ['i']:{'Model.neuroml.IClamp.amplitude':$('#currentValue').val()},
-                ['k']:{'hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
-                ['na']:{'hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
+                ['k']:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
+                ['na']:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
             });">Try!</button>
     </div>
 </div>
