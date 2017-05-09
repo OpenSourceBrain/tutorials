@@ -9,7 +9,7 @@
    
 
     <!-- Short small current pulse input & short larger current pulse input -->
-    <pulseGenerator id="IClamp" delay="5ms" duration="25ms" amplitude="0.002nA"/>
+    <pulseGenerator id="IClamp" delay="15ms" duration="25ms" amplitude="0.002nA"/>
     
     <!-- A voltage clamp with 3 clamp levels. Initially set to active=0, i.e. turned off! -->
     <voltageClampTriple id="vClamp" 
