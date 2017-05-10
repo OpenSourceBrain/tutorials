@@ -4,15 +4,19 @@
     for the IClamp. A greater amplitude of injection should lead to a higher firing rate. Try reducing the conductance densities of each of the channels to zero and see what happens. 
     </br>
     </br>
-    Try now recording the activation variables using the control panel.
-    If you click <a onclick="Controlpanel1.openWithFilter('ACTIVE_STATE_VARIABLES', 'HHTutorial.hhpop[0].bioPhys1.membraneProperties.');">here</a> the control panel will open,
-    already filtered to show you the gating variables. Click on the circle on the right to start recording each of them, the circle will get filled.
+    Try now recording the activation variables using the control panel. 
+    In the control panel you can record new variables by clicking on the circle on the right to start recording each of them, the circle will get filled.
+    
+    <b>To record the activation variables for the potassium channel click <a onclick="Controlpanel1.openWithFilter('ACTIVE_STATE_VARIABLES', 'kChan.n');">here</a>.</b>
+    <b>To record the activation variables for the sodium channel click <a onclick="Controlpanel1.openWithFilter('ACTIVE_STATE_VARIABLES', 'naChan.m');">here</a>.</b> 
+    
+    With the control panel open try to remove the filter to see all the available state variables.
     
     <div class="center">
-        <b>Input current (nA)</b> <input id="currentValue" type="text" value="0.6"></input></br>
-        <b>k conductance density (S/cm<sup>2</sup>)</b> <input id="kValue" type="text" value="0.036"></input></br>
-        <b>na conductance density (S/cm<sup>2</sup>)</b> <input id="naValue" type="text" value="0.12"></input></br>
-        <button class="btn" id="changeCurrent" onclick="quickExperiment('Inject',
+        <div class="tutorialLabel">Input current (nA)</div> <input id="currentValue" type="text" value="0.6"></input></br>
+        <div class="tutorialLabel">k conductance density (S/cm<sup>2</sup>)</div> <input id="kValue" type="text" value="0.036"></input></br>
+        <div class="tutorialLabel">na conductance density (S/cm<sup>2</sup>)</div> <input id="naValue" type="text" value="0.12"></input></br>
+        <button class="btn tutorialBtn" id="changeCurrent" onclick="quickExperiment('Inject',
             {
                 i:{'Model.neuroml.hhneuron.IClamp.amplitude':$('#currentValue').val()},
                 k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
