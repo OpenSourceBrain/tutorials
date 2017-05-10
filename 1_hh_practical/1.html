@@ -23,6 +23,7 @@
         <div class="tutorialLabel">na conductance density (S/cm<sup>2</sup>)</div> <input id="naValue" type="text" value="0.12"></input></br>
         <button class="btn" id="changeCurrent" onclick="quickExperiment('Inject',
             {
+                _vActive:{'Model.neuroml.hhneuron.vClamp.active':0},
                 i:{'Model.neuroml.hhneuron.IClamp.amplitude':$('#currentValue').val()},
                 k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
                 na:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}

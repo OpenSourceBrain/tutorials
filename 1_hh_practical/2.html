@@ -1,14 +1,34 @@
 <div style="color:white">
-Also, typing psection() in the command line interface (nrniv) shows a summary of the parameters for the currently accesses section. Some of the parameters that can be seen there are:
 
-	gnabar_hh	Na+ max conductance density			0.12 S/cm2
-	gkbar_hh	K+ max conductance density			0.036 S/cm2
-	gl_hh		Leak conductance density			0.0003 S/cm2
-	el_hh		Reversal potential leak conductance		-54.3 mV
-	nai		[Na+] inside					10 mM
-	nao		[Na+] outside					140 mM
-	ki		[K+] inside					54.4 mM
-	ko		[K+] outside					2.5 mM
+In this step we'll work with a voltage clamp instead of a current clamp. 
+With a voltage clamp a variable current is injected into the compartment in order to keep the voltage successively at three constant levels: a conditioning level, a testing level and a return level. 
 
-Next, switch to voltage clamp mode by clicking on the VClamp button in the I/V Clamp Electrode window. In each voltage clamp experiment, a variable current is injected into the compartment in order to keep the voltage successively at three constant levels: a conditioning level, a testing level and a return level. Click on the VClamp.igraph button at the bottom of the I/V Clamp Electrode window in order to display this clamp current.
+Before running new voltage clamp experiments start recording the current and conductance densities for the sodium and the potassium channels clicking 
+<a onclick="Controlpanel1.openWithFilter('ACTIVE_STATE_VARIABLES', 'Density');">here</a>.
+
+<div class="tutorialForm center">
+	<div class="tutorialLabel">Delay (ms)</div> <input id="clampDelay" type="text" value="10"></input>
+	<div class="tutorialLabel">Duration (ms)</div> <input id="clampDuration" type="text" value="30"></input>
+	<div class="tutorialLabel">Conditioning voltage (mV)</div> <input id="clampConditioning" type="text" value="-63.7"></input>
+	<div class="tutorialLabel">Testing voltage (mV)</div> <input id="clampTesting" type="text" value="10"></input>
+	<div class="tutorialLabel">Return voltage (mV)</div> <input id="clampReturn" type="text" value="10"></input>
+	<div class="tutorialLabel">Simple Series Resistance (ohm)</div> <input id="clampRes" type="text" value="10000"></input>
+	<div class="tutorialLabel">k conductance density (S/cm<sup>2</sup>)</div> <input id="kValue" type="text" value="0.036"></input>
+	<div class="tutorialLabel">na conductance density (S/cm<sup>2</sup>)</div> <input id="naValue" type="text" value="0.12"></input>
+	<button class="btn" id="changeCurrent" onclick="quickExperiment('Inject',
+		{
+			_delay:{'Model.neuroml.hhneuron.vClamp.delay':$('#clampDelay').val()},
+			_vActive:{'Model.neuroml.hhneuron.vClamp.active':1},
+			_IDuration:{'Model.neuroml.hhneuron.IClamp.duration':0},
+			condV:{'Model.neuroml.hhneuron.vClamp.conditioningVoltage':$('#clampConditioning').val()},
+			testingV:{'Model.neuroml.hhneuron.vClamp.testingVoltage':$('#clampTesting').val()},
+			returnV:{'Model.neuroml.hhneuron.vClamp.returnVoltage':$('#clampReturn').val()},
+			duration:{'Model.neuroml.hhneuron.vClamp.duration':$('#clampDuration').val()},
+			res:{'Model.neuroml.hhneuron.vClamp.simpleSeriesResistance':$('#clampRes').val()},
+			k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
+			na:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
+		}
+	);">Try!</button>
+</div>
+
 </div>
