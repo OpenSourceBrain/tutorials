@@ -1,10 +1,15 @@
 <div style="color:white">
-    A single compartment, (10 μm long, 3.18 μm diameter, 100 μm2 surface area) is being simulated containing a passive leak current (reversal potential -54.3mV) and <a onclick="showModelDescription(Model.neuroml.na);">sodium</a> and <a onclick="showModelDescription(Model.neuroml.k);">potassium</a>    active conductances. To get a feel for the simulation environment go to the I/V Clamp Electrode window, select IClamp (current clamp mode). The parameters for the current pulse to be injected to the compartment are shown. To run the simulation click
-    Init & Run on the RunControl Window. The membrane potential, the conductance and current through the Na and K channels are plotted in various windows, which can be resized as appropriate. First work in the IClamp mode: Try altering the parameters
-    for the IClamp. A greater amplitude of injection should lead to a higher firing rate. Try reducing the conductance densities of each of the channels to zero and see what happens. 
+    A single compartment, (10 μm long, 3.18 μm diameter, 100 μm2 surface area) is being simulated containing a passive leak current (reversal potential -54.3mV) and <a onclick="showModelDescription(Model.neuroml.na);">sodium</a> and <a onclick="showModelDescription(Model.neuroml.k);">potassium</a>    active conductances. 
+    Below you will see a selection of parameters for you to get a sense of this model. You can modify the parameters and run the simulation pressing the "Try!" button.
+    Every time you press "Try!" a new experiment will be created. You can find all the experiments that you execute in the tab at the bottom of the browser.
+    From the control panel you can plot variables from the currently active experiment or from any other experiment.
+    The membrane potential, the conductance and current through the Na and K channels are plotted in a new widget, which can be resized as appropriate. 
+    In this step the model is in IClamp mode which means you are injecting a current into the cell, you can vary the amplitude of the injected current below.
+    A greater amplitude of injection should lead to a higher firing rate. 
+    Try reducing the conductance densities of each of the channels to zero and see what happens. 
     </br>
     </br>
-    Try now recording the activation variables using the control panel. 
+    You can also try recording the activation variables using the control panel. 
     In the control panel you can record new variables by clicking on the circle on the right to start recording each of them, the circle will get filled.
     
     <b>To record the activation variables for the potassium channel click <a onclick="Controlpanel1.openWithFilter('ACTIVE_STATE_VARIABLES', 'kChan.n');">here</a>.</b>
