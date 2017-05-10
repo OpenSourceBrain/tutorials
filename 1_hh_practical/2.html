@@ -15,7 +15,7 @@ Before running new voltage clamp experiments start recording the current and con
 		<div class="tutorialLabel">Simple Series Resistance (ohm)</div> <input id="clampRes" type="text" value="10000"></input>
 		<div class="tutorialLabel">k conductance density (S/cm<sup>2</sup>)</div> <input id="kValue" type="text" value="0.036"></input>
 		<div class="tutorialLabel">na conductance density (S/cm<sup>2</sup>)</div> <input id="naValue" type="text" value="0.12"></input>
-		<button class="btn" id="changeCurrent" onclick="quickExperiment('Inject',
+		<button class="btn" id="changeCurrent" onclick="quickExperiment('VClamp',
 			{
 				_delay:{'Model.neuroml.hhneuron.vClamp.delay':$('#clampDelay').val()},
 				_vActive:{'Model.neuroml.hhneuron.vClamp.active':1},

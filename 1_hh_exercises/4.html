@@ -1,0 +1,16 @@
+<div style="color:white">
+<div class="tutorialQuestion">4 - Using an IClamp, find the minimum (positive) current (the rheobase current) for eliciting a single action potential (use a delay of 5 ms and a pulse duration of 25 ms). How “sharp” is the threshold phenomenon? Can you find a value of injected current that elicits a half-height action potential? </div> 
+<div class="tutorialForm center">
+    <div class="tutorialLabel">Input current (nA)</div> <input id="currentValue" type="text" value="0.6"></input></br>
+    <div class="tutorialLabel">k conductance density (S/cm<sup>2</sup>)</div> <input id="kValue" type="text" value="0.036"></input></br>
+    <div class="tutorialLabel">na conductance density (S/cm<sup>2</sup>)</div> <input id="naValue" type="text" value="0.12"></input></br>
+    <button class="btn" id="changeCurrent" onclick="quickExperiment('IClamp',
+        {
+            _vActive:{'Model.neuroml.hhneuron.vClamp.active':0},
+            i:{'Model.neuroml.hhneuron.IClamp.amplitude':$('#currentValue').val()},
+            k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
+            na:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
+        }
+    );">Run IClamp experiment</button>
+</div>
+</div>
