@@ -1,0 +1,30 @@
+<div style="color:white">
+<div class="tutorialQuestion">B3 - Compare the amplitude of the voltage responses in the distal dendrites (dend9[81]) for somatic and dendritic (dend9[76]) 
+	current injection. Why do they differ? 
+	Hint: plot the Na channel inactivation variable dend9[81].h_na3 using the Graph – State Axis function from the NEURON Main Menu. </div> 
+	<div class="tutorialForm center">
+		<div class="tutorialLabel">Delay (ms)</div> <input id="clampDelay" type="text" value="10"></input>
+		<div class="tutorialLabel">Duration (ms)</div> <input id="clampDuration" type="text" value="30"></input>
+		<div class="tutorialLabel">Conditioning voltage (mV)</div> <input id="clampConditioning" type="text" value="-63.7"></input>
+		<div class="tutorialLabel">Testing voltage (mV)</div> <input id="clampTesting" type="text" value="10"></input>
+		<div class="tutorialLabel">Return voltage (mV)</div> <input id="clampReturn" type="text" value="10"></input>
+		<div class="tutorialLabel">Simple Series Resistance (ohm)</div> <input id="clampRes" type="text" value="10000"></input>
+		<div class="tutorialLabel">k conductance density (S/cm<sup>2</sup>)</div> <input id="kValue" type="text" value="0.036"></input>
+		<div class="tutorialLabel">na conductance density (S/cm<sup>2</sup>)</div> <input id="naValue" type="text" value="0.12"></input>
+		<button class="btn" id="changeCurrent" onclick="quickExperiment('VClamp',
+			{
+				_delay:{'Model.neuroml.hhneuron.vClamp.delay':$('#clampDelay').val()},
+				_vActive:{'Model.neuroml.hhneuron.vClamp.active':1},
+				_IDuration:{'Model.neuroml.hhneuron.IClamp.duration':0},
+				condV:{'Model.neuroml.hhneuron.vClamp.conditioningVoltage':$('#clampConditioning').val()},
+				testingV:{'Model.neuroml.hhneuron.vClamp.testingVoltage':$('#clampTesting').val()},
+				returnV:{'Model.neuroml.hhneuron.vClamp.returnVoltage':$('#clampReturn').val()},
+				duration:{'Model.neuroml.hhneuron.vClamp.duration':$('#clampDuration').val()},
+				res:{'Model.neuroml.hhneuron.vClamp.simpleSeriesResistance':$('#clampRes').val()},
+				k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
+				na:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
+			}
+		);">Run VClamp experiment</button>
+	</div>
+</div>
+</div>

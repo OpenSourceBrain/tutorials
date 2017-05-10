@@ -1,0 +1,22 @@
+<div style="color:white">
+<div class="tutorialQuestion">A4 - Attenuation of voltage responses. Compare the somatic response to synaptic activation at a location 218 μm from the soma (MyExpSyn[0] at dend6[11], set gmax to e.g. 0.01 μS) 
+    to the response to synaptic activation 106 μm from the soma (MyExpSyn[1] at dend6[9], set gmax to the same value). 
+    In addition to plotting the membrane potential at the soma (what has been plotted until now) plot the local voltage responses. 
+    You can add a trace to the voltage graph by holding down the right mouse button, selecting Plot What and entering the specific variable, i.e. dend6[9].v and dend6[11].v. 
+    If these are not in the list, select a similar one and type in the name. 
+    You might want to change the colour of the traces, see above. What is the peak depolarisation at each the three locations for a) distal (MyExpSyn[0]) and b) more proximal (MyExpSyn[1]) synaptic excitation?  
+    How does the time course of the voltage responses in the three locations differ? Why is this?</div> 
+<div class="tutorialForm center">
+    <div class="tutorialLabel">Input current (nA)</div> <input id="currentValue" type="text" value="0.6"></input></br>
+    <div class="tutorialLabel">k conductance density (S/cm<sup>2</sup>)</div> <input id="kValue" type="text" value="0.036"></input></br>
+    <div class="tutorialLabel">na conductance density (S/cm<sup>2</sup>)</div> <input id="naValue" type="text" value="0.12"></input></br>
+    <button class="btn" id="changeCurrent" onclick="quickExperiment('IClamp',
+        {
+            _vActive:{'Model.neuroml.hhneuron.vClamp.active':0},
+            i:{'Model.neuroml.hhneuron.IClamp.amplitude':$('#currentValue').val()},
+            k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
+            na:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
+        }
+    );">Run IClamp experiment</button>
+</div>
+</div>

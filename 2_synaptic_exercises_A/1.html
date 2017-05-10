@@ -1,0 +1,25 @@
+<div style="color:white">
+Information on write up:
+Max length ~4 pages A4 (excluding figures), 2000 words (excluding legends, but keep legends brief and to the point). Figures properly numbered/labelled/with legends/referenced in main text/standalone/descriptive only (look at published papers).
+
+<div class="tutorialQuestion">A1 - Linear addition of input currents. What is the effect of different input currents on the voltage response in the soma? What does linear mean? 
+    Inject different currents into one of the basal dendrites (IClamp[0] at dend6[11]; vary the amplitude of injected current e.g. between 0.5 and 5 nA). 
+    You will have to readjust the axes because the somatic voltage responses are fairly small (in the Voltage Graph window, hold down the right mouse button and select View... -> View = plot). 
+    To overlay and compare different voltage responses, select (again after right mouse click) Keep Lines (note that there is also an Erase option and that you can change the colour of the traces with Color/Brush). 
+    You can read out the peak voltages by left clicking on the curves (a crosshair appears and the values are shown in the title bar). Are the voltage responses linear? </div> 
+
+<div class="tutorialForm center">
+    <div class="tutorialLabel">Input current (nA)</div> <input id="currentValue" type="text" value="0.6"></input></br>
+    <div class="tutorialLabel">k conductance density (S/cm<sup>2</sup>)</div> <input id="kValue" type="text" value="0.036"></input></br>
+    <div class="tutorialLabel">na conductance density (S/cm<sup>2</sup>)</div> <input id="naValue" type="text" value="0.12"></input></br>
+    <button class="btn" id="changeCurrent" onclick="quickExperiment('IClamp',
+        {
+            _vActive:{'Model.neuroml.hhneuron.vClamp.active':0},
+            i:{'Model.neuroml.hhneuron.IClamp.amplitude':$('#currentValue').val()},
+            k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
+            na:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
+        }
+    );">Run IClamp experiment</button>
+</div>
+
+</div>

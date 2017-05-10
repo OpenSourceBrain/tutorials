@@ -1,0 +1,18 @@
+<div style="color:white">
+<div class="tutorialQuestion">B5 - How can we change the location of spike initiation? Suggestion: increase the Na channel conductance at the selected 
+    dendritic location dend[78-81] and inject current either into the soma or into the dendrite at dend9[76]. 
+    Can you think of any other physiological changes/variations that could change the location of spike initiation?</div> 
+<div class="tutorialForm center">
+    <div class="tutorialLabel">Input current (nA)</div> <input id="currentValue" type="text" value="0.6"></input></br>
+    <div class="tutorialLabel">k conductance density (S/cm<sup>2</sup>)</div> <input id="kValue" type="text" value="0.036"></input></br>
+    <div class="tutorialLabel">na conductance density (S/cm<sup>2</sup>)</div> <input id="naValue" type="text" value="0.12"></input></br>
+    <button class="btn" id="changeCurrent" onclick="quickExperiment('IClamp',
+        {
+            _vActive:{'Model.neuroml.hhneuron.vClamp.active':0},
+            i:{'Model.neuroml.hhneuron.IClamp.amplitude':$('#currentValue').val()},
+            k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
+            na:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
+        }
+    );">Run IClamp experiment</button>
+</div>
+</div>
