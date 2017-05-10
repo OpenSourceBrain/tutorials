@@ -1,44 +1,13 @@
 <div style="color:white">
 
-In this step we'll work with a voltage clamp instead of a current clamp. 
-With a voltage clamp a variable current is injected into the compartment in order to keep the voltage successively at three constant levels: a conditioning level, a testing level and a return level. 
+<b>References</b>
+<br/>
+<br/>
+<ul>
+    <li>Methods in Neuronal Modeling: from Ions to Networks. C. Koch and I. Segev editors, MIT Press (1998).</li>
+    <li>Computational Neuroscience: Realistic Modeling for Experimentalists. E. De Schutter editor, CRC Press (2000).</li>
+    <li>Mainen, Z., Joerges, J., Huguenard, J.R. and Sejnowski, T.J. (1995). A model of spike Initiation in neocortical pyramidal neurons. Neuron 15, 1427-1439.</li>
+    <li>Stuart, G.J. and Sakmann, B. (1994). Active propagation of somatic action potentials into neocortical pyramidal cell dendrites. Nature 367, 69-7</li>
+</ul>
 
-Before running new voltage clamp experiments start recording the current and conductance densities for the sodium and the potassium channels clicking 
-<a onclick="Controlpanel1.openWithFilter('ACTIVE_STATE_VARIABLES', 'Density');">here</a>.
-
-	<div class="tutorialForm center">
-		<div class="tutorialLabel">Delay (ms)</div> <input id="clampDelay" type="text" value="10"></input>
-		<div class="tutorialLabel">Duration (ms)</div> <input id="clampDuration" type="text" value="30"></input>
-		<div class="tutorialLabel">Conditioning voltage (mV)</div> <input id="clampConditioning" type="text" value="-63.7"></input>
-		<div class="tutorialLabel">Testing voltage (mV)</div> <input id="clampTesting" type="text" value="10"></input>
-		<div class="tutorialLabel">Return voltage (mV)</div> <input id="clampReturn" type="text" value="10"></input>
-		<div class="tutorialLabel">Simple Series Resistance (ohm)</div> <input id="clampRes" type="text" value="10000"></input>
-		<div class="tutorialLabel">k conductance density (S/cm<sup>2</sup>)</div> <input id="kValue" type="text" value="0.036"></input>
-		<div class="tutorialLabel">na conductance density (S/cm<sup>2</sup>)</div> <input id="naValue" type="text" value="0.12"></input>
-		<button class="btn" id="changeCurrent" onclick="quickExperiment('VClamp',
-			{
-				_delay:{'Model.neuroml.hhneuron.vClamp.delay':$('#clampDelay').val()},
-				_vActive:{'Model.neuroml.hhneuron.vClamp.active':1},
-				_IDuration:{'Model.neuroml.hhneuron.IClamp.duration':0},
-				condV:{'Model.neuroml.hhneuron.vClamp.conditioningVoltage':$('#clampConditioning').val()},
-				testingV:{'Model.neuroml.hhneuron.vClamp.testingVoltage':$('#clampTesting').val()},
-				returnV:{'Model.neuroml.hhneuron.vClamp.returnVoltage':$('#clampReturn').val()},
-				duration:{'Model.neuroml.hhneuron.vClamp.duration':$('#clampDuration').val()},
-				res:{'Model.neuroml.hhneuron.vClamp.simpleSeriesResistance':$('#clampRes').val()},
-				k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
-				na:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
-			}
-		);">Try!</button>
-	</div>
-<div style="float:left">
-	Try to step the voltage from resting potential (in this case, -63.77 mV) to a testing level of -10 mV for 30 ms. 
-	You will notice four distinct currents during the course of the simulation:
-
-	<ul>
-		<li>A very brief positive spike at the onset of the voltage change. This is the capacitive current that is related to charging the membrane capacitance.</li>
-		<li>A negative peak that represents the extra current needing to be injected to counteract the inward current through the fast sodium channels and hold the voltage constant.</li>
-		<li>A sustained positive (outward) current in response to the increased potassium conductance. </li>
-		<li>A smaller transient current after the voltage clamp returns to resting membrane potential. There is an instantaneous change in the driving force the current through the potassium channels experiences, and the gates in channels gradually close at this membrane potential.</li>
-	</ul>
-</div>
 </div>

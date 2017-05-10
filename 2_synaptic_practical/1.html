@@ -1,22 +1,10 @@
 <div style="color:white">
-    A single compartment, (10 μm long, 3.18 μm diameter, 100 μm2 surface area) is being simulated containing a passive leak current (reversal potential -54.3mV) and <a onclick="showModelDescription(Model.neuroml.na);">sodium</a> and <a onclick="showModelDescription(Model.neuroml.k);">potassium</a>    active conductances. 
-    Below you will see a selection of parameters for you to get a sense of this model. You can modify the parameters and run the simulation pressing the "Try!" button.
-    Every time you press "Try!" a new experiment will be created. You can find all the experiments that you execute in the tab at the bottom of the browser.
-    From the control panel you can plot variables from the currently active experiment or from any other experiment.
-    The membrane potential, the conductance and current through the Na and K channels are plotted in a new widget, which can be resized as appropriate. 
-    In this step the model is in IClamp mode which means you are injecting a current into the cell, you can vary the amplitude of the injected current below.
-    A greater amplitude of injection should lead to a higher firing rate. 
-    Try reducing the conductance densities of each of the channels to zero and see what happens. 
-    </br>
-    </br>
-    You can also try recording the activation variables using the control panel. 
-    In the control panel you can record new variables by clicking on the circle on the right to start recording each of them, the circle will get filled.
-    
-    <b>To record the activation variables for the potassium channel click <a onclick="Controlpanel1.openWithFilter('ACTIVE_STATE_VARIABLES', 'kChan.n');">here</a>.</b>
-    <b>To record the activation variables for the sodium channel click <a onclick="Controlpanel1.openWithFilter('ACTIVE_STATE_VARIABLES', 'naChan.m');">here</a>.</b> 
-    
-    With the control panel open try to remove the filter to see all the available state variables.
-    
+    The goal of the first part of this practical is to understand some of the factors influencing linear and non-linear interactions between inputs 
+    in a morphologically complex neuron. The practical uses a multi-compartmental model of a cortical layer 5 pyramidal neuron based on a model developed 
+    in NEURON by Zach Mainen (Mainen et al. 1995). Some of the exercises look at the passive properties of the cell while others include basic Na+ and 
+    K+ channels on the dendrites (although it is known that a much wider range of conductances are present on pyramidal cell dendrites).
+
+   
     <div class="tutorialForm center">
         <div class="tutorialLabel">Input current (nA)</div> <input id="currentValue" type="text" value="0.6"></input></br>
         <div class="tutorialLabel">k conductance density (S/cm<sup>2</sup>)</div> <input id="kValue" type="text" value="0.036"></input></br>
