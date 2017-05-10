@@ -3,28 +3,28 @@
     "height": "600",
     "width": "900",
     "steps": [{
-        "title": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
+        "title": "Exercise 1",
         "content_url": "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_exercises/1.html"
     },{
-        "title": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
+        "title": "Exercise 2",
         "content_url": "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_exercises/2.html"
     },{
-        "title": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
+        "title": "Exercise 3",
         "content_url": "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_exercises/3.html"
     },{
-        "title": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
+        "title": "Exercise 4",
         "content_url": "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_exercises/4.html"
     },{
-        "title": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
+        "title": "Exercise 5",
         "content_url": "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_exercises/5.html"
     },{
-        "title": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
+        "title": "Exercise 6",
         "content_url": "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_exercises/6.html"
     },{
-        "title": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
+        "title": "Exercise 7",
         "content_url": "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_exercises/7.html"
     },{
-        "title": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
+        "title": "Exercise 8",
         "content_url": "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_exercises/8.html"
     }]
 }
