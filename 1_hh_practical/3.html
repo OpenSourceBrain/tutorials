@@ -1,6 +1,6 @@
 <div style="color:white">
 
-Keep in mind that the clamp current and the clamp voltage displayed in Graph[0] are the only two variables that were accessible to Hodgkin and Huxley in their experiments, the variables that are shown in the other windows are not directly observable and only accessible in our simulation. 
+Keep in mind that the clamp current and the clamp voltage displayed are the only two variables that were accessible to Hodgkin and Huxley in their experiments, the variables that are shown in the other windows are not directly observable and only accessible in our simulation. 
 
 In order to study the K current alone, Hodgkin and Huxley replaced Na ions in the external solution with an impermeant cation, thus eliminating the contribution of the ion flow through the Na channels to the measured currents. 
 You can replicate this in the simulation by setting the Na channel conductance to 0. 
@@ -11,42 +11,29 @@ Make sure you are still recording the activation variables using the control pan
 <b>To record the activation variables for the sodium channel click <a onclick="Controlpanel1.openWithFilter('ACTIVE_STATE_VARIABLES', 'naChan.m');">here</a>.</b> 
 
 
-<div class="tutorialForm center">
-	<div class="tutorialLabel">Delay (ms)</div> <input id="clampDelay" type="text" value="10"></input>
-	<div class="tutorialLabel">Duration (ms)</div> <input id="clampDuration" type="text" value="30"></input>
-	<div class="tutorialLabel">Conditioning voltage (mV)</div> <input id="clampConditioning" type="text" value="-63.7"></input>
-	<div class="tutorialLabel">Testing voltage (mV)</div> <input id="clampTesting" type="text" value="10"></input>
-	<div class="tutorialLabel">Return voltage (mV)</div> <input id="clampReturn" type="text" value="10"></input>
-	<div class="tutorialLabel">Simple Series Resistance (ohm)</div> <input id="clampRes" type="text" value="10000"></input>
-	<div class="tutorialLabel">k conductance density (S/cm<sup>2</sup>)</div> <input id="kValue" type="text" value="0.036"></input>
-	<div class="tutorialLabel">na conductance density (S/cm<sup>2</sup>)</div> <input id="naValue" type="text" value="0.12"></input>
-	<button class="btn" id="changeCurrent" onclick="quickExperiment('Inject',
-		{
-			_delay:{'Model.neuroml.hhneuron.vClamp.delay':$('#clampDelay').val()},
-			_vActive:{'Model.neuroml.hhneuron.vClamp.active':1},
-			_IDuration:{'Model.neuroml.hhneuron.IClamp.duration':0},
-			condV:{'Model.neuroml.hhneuron.vClamp.conditioningVoltage':$('#clampConditioning').val()},
-			testingV:{'Model.neuroml.hhneuron.vClamp.testingVoltage':$('#clampTesting').val()},
-			returnV:{'Model.neuroml.hhneuron.vClamp.returnVoltage':$('#clampReturn').val()},
-			duration:{'Model.neuroml.hhneuron.vClamp.duration':$('#clampDuration').val()},
-			res:{'Model.neuroml.hhneuron.vClamp.simpleSeriesResistance':$('#clampRes').val()},
-			k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
-			na:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
-		}
-	);">Try!</button>
-</div>
-
-Set the Na conductance back to its default value of 0.12 S/cm2, and repeat the voltage clamp experiments with the K channel conductance set to 0, noting the different behaviours of the activation and inactivation variables. Do this for a few different testing voltages (e.g. 10 mV, -10 mV, -30 mV, -50 mV). 
-
-When looking more carefully at the time courses of the K current and conductance you will notice that they start with a slow rise and speed up before settling down into the steady state value. 
-In order to reproduce this shape, Hodgkin and Huxley had to raise the K activation variable n to the fourth power:
-
-<img src='https://github.com/tarelli/tutorials/raw/master/1_hh_practical/eq1.png' class="invert center"></img>
-
-
-Tip for write up/essay: you can download screenshots of each of the plot windows using the Save as image icon (2nd from the left) at the top of each plot windows.  
-Ensure numbers on axes will be legible in final figure. 
-If you want to make your own custom graphs, you can click the Download Plot Data icon (3rd from the left): the file saved can be imported into Excel.
-
+	<div class="tutorialForm center">
+		<div class="tutorialLabel">Delay (ms)</div> <input id="clampDelay" type="text" value="10"></input>
+		<div class="tutorialLabel">Duration (ms)</div> <input id="clampDuration" type="text" value="30"></input>
+		<div class="tutorialLabel">Conditioning voltage (mV)</div> <input id="clampConditioning" type="text" value="-63.7"></input>
+		<div class="tutorialLabel">Testing voltage (mV)</div> <input id="clampTesting" type="text" value="10"></input>
+		<div class="tutorialLabel">Return voltage (mV)</div> <input id="clampReturn" type="text" value="10"></input>
+		<div class="tutorialLabel">Simple Series Resistance (ohm)</div> <input id="clampRes" type="text" value="10000"></input>
+		<div class="tutorialLabel">k conductance density (S/cm<sup>2</sup>)</div> <input id="kValue" type="text" value="0.036"></input>
+		<div class="tutorialLabel">na conductance density (S/cm<sup>2</sup>)</div> <input id="naValue" type="text" value="0.12"></input>
+		<button class="btn" id="changeCurrent" onclick="quickExperiment('Inject',
+			{
+				_delay:{'Model.neuroml.hhneuron.vClamp.delay':$('#clampDelay').val()},
+				_vActive:{'Model.neuroml.hhneuron.vClamp.active':1},
+				_IDuration:{'Model.neuroml.hhneuron.IClamp.duration':0},
+				condV:{'Model.neuroml.hhneuron.vClamp.conditioningVoltage':$('#clampConditioning').val()},
+				testingV:{'Model.neuroml.hhneuron.vClamp.testingVoltage':$('#clampTesting').val()},
+				returnV:{'Model.neuroml.hhneuron.vClamp.returnVoltage':$('#clampReturn').val()},
+				duration:{'Model.neuroml.hhneuron.vClamp.duration':$('#clampDuration').val()},
+				res:{'Model.neuroml.hhneuron.vClamp.simpleSeriesResistance':$('#clampRes').val()},
+				k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
+				na:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
+			}
+		);">Try!</button>
+	</div>
 
 </div>

@@ -1,10 +1,17 @@
 <div style="color:white">
 
-In this step we'll work with a voltage clamp instead of a current clamp. 
-With a voltage clamp a variable current is injected into the compartment in order to keep the voltage successively at three constant levels: a conditioning level, a testing level and a return level. 
+	When looking more carefully at the time courses of the K current and conductance you will notice that they start with a slow rise and speed up before settling down into the steady state value. 
+	In order to reproduce this shape, Hodgkin and Huxley had to raise the K activation variable n to the fourth power:
 
-Before running new voltage clamp experiments start recording the current and conductance densities for the sodium and the potassium channels clicking 
-<a onclick="Controlpanel1.openWithFilter('ACTIVE_STATE_VARIABLES', 'Density');">here</a>.
+	<img src='https://github.com/tarelli/tutorials/raw/master/1_hh_practical/eq1.png' class="invert center"></img>
+
+	Now, first make sure you are still recording the activation variables using the control panel before running the experiment.
+	<b>To record the activation variables for the potassium channel click <a onclick="Controlpanel1.openWithFilter('ACTIVE_STATE_VARIABLES', 'kChan.n');">here</a>.</b>
+	<b>To record the activation variables for the sodium channel click <a onclick="Controlpanel1.openWithFilter('ACTIVE_STATE_VARIABLES', 'naChan.m');">here</a>.</b> 
+
+	</br>
+
+	Now set the Na conductance back to its default value of 0.12 S/cm2, and repeat the voltage clamp experiments with the K channel conductance set to 0, noting the different behaviours of the activation and inactivation variables. Do this for a few different testing voltages (e.g. 10 mV, -10 mV, -30 mV, -50 mV). 
 
 	<div class="tutorialForm center">
 		<div class="tutorialLabel">Delay (ms)</div> <input id="clampDelay" type="text" value="10"></input>
@@ -31,14 +38,10 @@ Before running new voltage clamp experiments start recording the current and con
 		);">Try!</button>
 	</div>
 
-Try to step the voltage from resting potential (in this case, -63.77 mV) to a testing level of -10 mV for 30 ms. 
-You will notice four distinct currents during the course of the simulation:
-
-<ul>
-	<li>A very brief positive spike at the onset of the voltage change. This is the capacitive current that is related to charging the membrane capacitance.</li>
-	<li>A negative peak that represents the extra current needing to be injected to counteract the inward current through the fast sodium channels and hold the voltage constant.</li>
-	<li>A sustained positive (outward) current in response to the increased potassium conductance. </li>
-	<li>A smaller transient current after the voltage clamp returns to resting membrane potential. There is an instantaneous change in the driving force the current through the potassium channels experiences, and the gates in channels gradually close at this membrane potential.</li>
-</ul>
+	<div>
+		Tip for write up/essay: you can download screenshots of each of the plot windows using the Save as image icon (2nd from the left) at the top of each plot windows.  
+		Ensure numbers on axes will be legible in final figure. 
+		If you want to make your own custom graphs, you can click the Download Plot Data icon (3rd from the left): the file saved can be imported into Excel.
+	</div>
 
 </div>
