@@ -4,7 +4,7 @@
     {
       "aspectConfigurations": [
         {
-          "instance": "HHTutorial",
+          "instance": "Synaptic integration",
           "simulatorConfiguration": {
             "conversionServiceId": "lemsConversion",
             "id": 1,
@@ -20,10 +20,10 @@
           ]
         }
       ],
-      "description": "The Hodgkin-Huxley model (or conductance-based model) is a mathematical model that describes how action potentials in neurons are initiated and propagated. It is a set of nonlinear differential equations that approximates the electrical characteristics of excitable cells such as neurons.",
+      "description": "Synaptic integration tutorial",
       "id": 1,
       "lastModified": "1436102517799",
-      "name": "Hodgkin-Huxley Tutorial",
+      "name": "Synaptic integration Tutorial",
       "status": "DESIGN",
       "view": {
         "id": 189,
@@ -35,8 +35,9 @@
               "dataType": "array",
               "data": [
                 "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_intro/hh_intro.json",
-                "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_practical/hh_practical.json",
-                "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_exercises/hh_exercises.json"
+                "https://raw.githubusercontent.com/tarelli/tutorials/master/2_synaptic_practical/synaptic_practical.json",
+                "https://raw.githubusercontent.com/tarelli/tutorials/master/2_synaptic_exercises_A/synaptic_exercises_A.json",
+                "https://raw.githubusercontent.com/tarelli/tutorials/master/2_synaptic_exercises_B/synaptic_exercises_B.json"
               ],
               "componentSpecific": {
                 "activeTutorial": "Open Source Brain Tutorial",
@@ -62,5 +63,5 @@
     "url": "/GeppettoModel.xmi"
   },
   "id": 1,
-  "name": "Hodgkin-Huxley Tutorial"
+  "name": "Synaptic integration Tutorial"
 }
