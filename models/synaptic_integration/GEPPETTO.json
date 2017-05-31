@@ -31,7 +31,6 @@
               "isWidget": true,
               "dataType": "array",
               "data": [
-                "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_intro/hh_intro.json",
                 "https://raw.githubusercontent.com/tarelli/tutorials/master/2_synaptic_practical/synaptic_practical.json",
                 "https://raw.githubusercontent.com/tarelli/tutorials/master/2_synaptic_exercises_A/synaptic_exercises_A.json",
                 "https://raw.githubusercontent.com/tarelli/tutorials/master/2_synaptic_exercises_B/synaptic_exercises_B.json"
