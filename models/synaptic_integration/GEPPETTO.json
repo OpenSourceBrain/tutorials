@@ -10,14 +10,11 @@
             "id": 1,
             "length": 0.15,
             "parameters": {
-              "target": "HHTutorial"
+              "target": "network_MainenEtAl_PyramidalCell"
             },
             "simulatorId": "neuronSimulator",
             "timestep": 5.0e-05
-          },
-          "watchedVariables": [
-            "HHTutorial.hhpop[0].v"
-          ]
+          }
         }
       ],
       "description": "Synaptic integration tutorial",
