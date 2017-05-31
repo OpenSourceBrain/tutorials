@@ -16,6 +16,6 @@
         id="HHTutorial"
         url="https://raw.githubusercontent.com/OpenSourceBrain/SynapticIntegration/master/Tutorial/Tutorial2a.net.nml"
         referenceURL="hhcell"
-        modelInterpreterId="neuromlModelInterpreter"/>
+        modelInterpreterId="neuroMLModelInterpreter"/>
   </libraries>
 </gep:GeppettoModel>
