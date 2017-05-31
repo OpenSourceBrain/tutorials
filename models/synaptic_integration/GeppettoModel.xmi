@@ -13,7 +13,7 @@
       id="neuroml"
       name="NeuroML">
     <types xsi:type="gep_1:ImportType"
-        id="HHTutorial"
+        id="network_MainenEtAl_PyramidalCell"
         url="https://raw.githubusercontent.com/OpenSourceBrain/SynapticIntegration/master/Tutorial/Tutorial2a.net.nml"
         referenceURL="hhcell"
         modelInterpreterId="neuroMLModelInterpreter"/>
