@@ -29,6 +29,28 @@
         "id": 189,
         "viewStates": {
           "views": {
+            "Canvas1": {
+              "widgetType": "CANVAS",
+              "isWidget": false,
+              "dataType": "instances",
+              "data": [
+                "HHTutorial"
+              ],
+              "componentSpecific": {
+                "cameraPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 15
+                },
+                "cameraRotation": {
+                  "rx": 0,
+                  "ry": 0,
+                  "rz": 0,
+                  "radius": 15
+                },
+                "backgroundColor": "0x101010"
+              }
+            },
             "Tutorial1": {
               "widgetType": "TUTORIAL",
               "isWidget": true,
