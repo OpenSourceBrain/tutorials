@@ -36,7 +36,7 @@
                 "https://raw.githubusercontent.com/tarelli/tutorials/master/2_synaptic_exercises_B/synaptic_exercises_B.json"
               ],
               "componentSpecific": {
-                "activeTutorial": "Open Source Brain Tutorial",
+		"title": "Practical 1: Properties of a Morphologically Complex Neuron",
                 "currentStep": 0
               },
               "size": {

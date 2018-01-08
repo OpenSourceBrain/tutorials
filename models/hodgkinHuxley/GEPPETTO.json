@@ -61,7 +61,7 @@
                 "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_exercises/hh_exercises.json"
               ],
               "componentSpecific": {
-                "activeTutorial": "Open Source Brain Tutorial",
+                "activeTutorial": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
                 "currentStep": 0
               },
               "size": {
