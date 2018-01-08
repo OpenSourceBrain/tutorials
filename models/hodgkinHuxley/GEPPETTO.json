@@ -61,7 +61,7 @@
                 "https://raw.githubusercontent.com/mattearnshaw/tutorials/master/1_hh_exercises/hh_exercises.json"
               ],
               "componentSpecific": {
-                "activeTutorial": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
+                "activeTutorial": "Simulating the Action Potential with Hodgkin-Huxley Kinetics",
                 "currentStep": 0
               },
               "size": {
