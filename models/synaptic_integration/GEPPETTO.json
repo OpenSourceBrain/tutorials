@@ -19,6 +19,7 @@
       ],
       "description": "Synaptic integration tutorial",
       "id": 1,
+      "script": "/script.js",
       "lastModified": "1436102517799",
       "name": "Synaptic integration Tutorial",
       "status": "DESIGN",

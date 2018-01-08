@@ -25,6 +25,7 @@
       "lastModified": "1436102517799",
       "name": "Hodgkin-Huxley Tutorial",
       "status": "DESIGN",
+      "script": "/script.js",
       "view": {
         "id": 189,
         "viewStates": {
