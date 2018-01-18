@@ -4,21 +4,21 @@
     "width": "900",
     "steps": [{
         "title": " A brief introduction to computational neuroscience",
-        "content_url": "https://raw.githubusercontent.com/mattearnshaw/tutorials/master/1_hh_intro/1.html"
+        "content_url": "https://raw.githubusercontent.com/mattearnshaw/tutorials/development/1_hh_intro/1.html"
     }, {
         "title": " A brief introduction to computational neuroscience",
-        "content_url": "https://raw.githubusercontent.com/mattearnshaw/tutorials/master/1_hh_intro/2a.html"
+        "content_url": "https://raw.githubusercontent.com/mattearnshaw/tutorials/development/1_hh_intro/2a.html"
     }, {
         "title": " A brief introduction to computational neuroscience",
-        "content_url": "https://raw.githubusercontent.com/mattearnshaw/tutorials/master/1_hh_intro/2b.html"
+        "content_url": "https://raw.githubusercontent.com/mattearnshaw/tutorials/development/1_hh_intro/2b.html"
     }, {
         "title": " A brief introduction to computational neuroscience",
-        "content_url": "https://raw.githubusercontent.com/mattearnshaw/tutorials/master/1_hh_intro/3.html"
+        "content_url": "https://raw.githubusercontent.com/mattearnshaw/tutorials/development/1_hh_intro/3.html"
     }, {
         "title": " A brief introduction to computational neuroscience",
-        "content_url": "https://raw.githubusercontent.com/mattearnshaw/tutorials/master/1_hh_intro/4.html"
+        "content_url": "https://raw.githubusercontent.com/mattearnshaw/tutorials/development/1_hh_intro/4.html"
     }, {
         "title": " A brief introduction to computational neuroscience",
-        "content_url": "https://raw.githubusercontent.com/mattearnshaw/tutorials/master/1_hh_intro/5.html"
+        "content_url": "https://raw.githubusercontent.com/mattearnshaw/tutorials/development/1_hh_intro/5.html"
     }]
 }
