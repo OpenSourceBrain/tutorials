@@ -22,7 +22,7 @@
       $('.tutorialForm input, .tutorialForm button').prop('disabled', false);
   });
 
-  if (!GEPPETTO.UserController.canUserEditExperiment()) {
+  if (!Project.persisted) {
       $('.tutorialForm input, .tutorialForm button').prop('disabled', true);
   }
   </script>
