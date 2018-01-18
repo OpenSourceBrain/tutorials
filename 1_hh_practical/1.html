@@ -1,5 +1,5 @@
 <script type="text/javascript" id="tutorialScript">
-  function recordVar(path) {
+  var recordVar = function(path) {
   return function() {
       var instance = Instances.getInstance(path);
       if (GEPPETTO.ExperimentsController.isWatched(instance))
@@ -36,7 +36,8 @@
         <div class="tutorialLabel">na conductance density (S/cm<sup>2</sup>)</div> <input id="naValue" type="text" value="0.12"></input></br>
         <div class="tutorialLabel">Record sodium activation variable</div>
         <input id="naQ" type="checkbox"></input></br>
-        <div class="tutorialLabel">Record potassium activation variable</div> <input id="kQ" type="checkbox"></input></br>
+        <div class="tutorialLabel">Record potassium activation variable</div>
+        <input id="kQ" type="checkbox" onclick="function() { GEPPETTO.ExperimentsController.watchVariables([Instances.getInstance('HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.m.q')], this.checked) }"></input></br>
         <button class="btn" id="changeCurrent" onclick="quickExperiment('IClamp',
             {
                 _vActive:{'Model.neuroml.hhneuron.vClamp.active':0},
