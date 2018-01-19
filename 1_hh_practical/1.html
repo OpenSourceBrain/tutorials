@@ -1,26 +1,33 @@
 <script type="text/javascript" id="tutorialScript">
-  var watchedVars = [];
+  var stateVars = {
+  'HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.m.q': true
+  'HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.h.q': true,
+  'HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.kChan.n.q': true,
+  'HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.gDensity': true,
+  'HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.gDensity': true,
+  'HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.iDensity': true,
+  'HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.iDensity': true
+  }
   document.getElementById('actVars').onclick = function() {
-      var vars = ['HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.m.q',
+      var actVars = ['HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.m.q',
                   'HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.h.q',
                   'HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.kChan.n.q'];
-      if (this.checked)
-          watchedVars = watchedVars.concat(vars);
-  else
-       for (var v of vars)
-           watchedVars.splice(watchedVars.indexOf(v), 1);
-      };
+      for (var v of actVars)
+          stateVars[v] = this.checked;
+  };
 
   document.getElementById('gDensity').onclick = function() {
-  GEPPETTO.ExperimentsController.watchVariables(
-      [Instances.getInstance('HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.gDensity'),
-       Instances.getInstance('HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.gDensity')], this.checked);
+      var gDensity = ['HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.gDensity',
+                      'HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.gDensity'];
+      for (var v of gDensity)
+          stateVars[v] = this.checked;
   };
 
   document.getElementById('iDensity').onclick = function() {
-  GEPPETTO.ExperimentsController.watchVariables(
-      [Instances.getInstance('HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.iDensity'),
-       Instances.getInstance('HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.iDensity')], this.checked);
+      var iDensity = ['HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.iDensity',
+                      'HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.iDensity'];
+      for (var v of iDensity)
+          stateVars[v] = this.checked;
   };
 
   GEPPETTO.on(GEPPETTO.Events.Project_persisted, function() {
@@ -39,7 +46,7 @@
                 k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
                 na:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
   },
-  watchedVars
+  stateVars
         );
   }
   </script>
