@@ -1,10 +1,15 @@
 <script type="text/javascript" id="tutorialScript">
+  var watchedVars = [];
   document.getElementById('actVars').onclick = function() {
-  GEPPETTO.ExperimentsController.watchVariables(
-      [Instances.getInstance('HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.m.q'),
-       Instances.getInstance('HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.h.q'),
-       Instances.getInstance('HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.kChan.n.q')], this.checked);
-  };
+      var vars = ['HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.m.q',
+                  'HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.h.q',
+                  'HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.kChan.n.q'];
+      if (this.checked)
+          watchedVars = watchedVars.concat(vars);
+  else
+       for (var v of vars)
+           watchedVars.splice(watchedVars.indexOf(v), 1);
+      };
 
   document.getElementById('gDensity').onclick = function() {
   GEPPETTO.ExperimentsController.watchVariables(
@@ -24,6 +29,18 @@
 
   if (!Project.persisted) {
       $('.tutorialForm input, .tutorialForm button').prop('disabled', true);
+  }
+
+  document.getElementById('changeCurrent').onclick = function() {
+       quickExperiment('IClamp',
+            {
+                _vActive:{'Model.neuroml.hhneuron.vClamp.active':0},
+                i:{'Model.neuroml.hhneuron.IClamp.amplitude':$('#currentValue').val()},
+                k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
+                na:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
+  },
+  watchedVars
+        );
   }
   </script>
 <div style="color:white">
@@ -48,13 +65,6 @@
         <input id="gDensity" type="checkbox" checked></input></br>
         <div class="tutorialLabel">Record current densities</div>
         <input id="iDensity" type="checkbox" checked></input></br>
-        <button class="btn" id="changeCurrent" onclick="quickExperiment('IClamp',
-            {
-                _vActive:{'Model.neuroml.hhneuron.vClamp.active':0},
-                i:{'Model.neuroml.hhneuron.IClamp.amplitude':$('#currentValue').val()},
-                k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
-                na:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
-            }
-        );">Try!</button>
+        <button class="btn" id="changeCurrent">Try!</button>
     </div>
 </div>
