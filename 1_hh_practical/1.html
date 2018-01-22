@@ -49,11 +49,22 @@
   stateVars
         );
   }
+
+  document.getElementById('persist').onclick = function() {
+  if (!GEPPETTO.UserController.hasPermission(GEPPETTO.Resources.WRITE_PROJECT)) {
+      var message = "Projects can only be persisted by registered users. Please <a href='" + window.osbURL + "/login' target='_blank'>log in</a> or <a href='" + window.osbURL + "/account/register' target='_blank'>register</a> for an account.";
+      GEPPETTO.ModalFactory.infoDialog("Cannot persist experiment", message);
+  } else {
+      GEPPETTO.on(GEPPETTO.Events.Project_persisted, function() { GEPPETTO.Spinner.hideSpinner(); })
+      GEPPETTO.Spinner.showSpinner("Persisting project…");
+      Project.persist();
+   }
+  }
   </script>
 <div style="color:white">
   <p>A single compartment, (10 μm long, 3.18 μm diameter, 100 μm2 surface area) is being simulated containing a passive leak current (reversal potential -54.3mV) and <a onclick="showModelDescription(Model.neuroml.naChan);">sodium</a> and <a onclick="showModelDescription(Model.neuroml.kChan);">potassium</a> active conductances.<p>
 
-    <p>Below you will see a selection of parameters for you to get a sense of this model. First you must persist the model by <a onclick="Project.persist();">clicking here</a> (or the star icon in the toolbar). This will take a few seconds, then you can modify the parameters and run the simulation by pressing the "Try!" button. Every time you press "Try!" a new experiment will be created. You can find all the experiments that you execute in the tab at the bottom of the browser.</p>
+    <p>Below you will see a selection of parameters for you to get a sense of this model. First you must persist the model by <a id="persist">clicking here</a> (or the star icon in the toolbar). This will take a few seconds, then you can modify the parameters and run the simulation by pressing the "Try!" button. Every time you press "Try!" a new experiment will be created. You can find all the experiments that you execute in the tab at the bottom of the browser.</p>
 
   <p>After the experiment finished running, plots will be displayed for the membrane potential, conductance and current through the Na and K channels.</p>
 

@@ -1,3 +1,13 @@
+<script type="text/javascript" id="tutorialScript">
+  GEPPETTO.on(GEPPETTO.Events.Project_persisted, function() {
+      $('.tutorialForm input, .tutorialForm button').prop('disabled', false);
+  });
+
+  if (!Project.persisted) {
+      $('.tutorialForm input, .tutorialForm button').prop('disabled', true);
+  }
+</script>
+
 <div style="color:white">
 
 In this step we'll work with a voltage clamp instead of a current clamp. 
