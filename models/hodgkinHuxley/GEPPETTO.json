@@ -16,7 +16,14 @@
             "timestep": 5.0e-05
           },
           "watchedVariables": [
-            "HHTutorial.hhpop[0].v"
+              "HHTutorial.hhpop[0].v",
+              "HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.m.q",
+              "HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.h.q",
+              "HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.kChan.n.q",
+              "HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.gDensity",
+              "HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.gDensity",
+              "HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.iDensity",
+              "HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.iDensity"
           ]
         }
       ],
@@ -25,6 +32,7 @@
       "lastModified": "1436102517799",
       "name": "Hodgkin-Huxley Tutorial",
       "status": "DESIGN",
+      "script": "/script.js",
       "view": {
         "id": 189,
         "viewStates": {
@@ -56,21 +64,21 @@
               "isWidget": true,
               "dataType": "array",
               "data": [
-                "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_intro/hh_intro.json",
-                "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_practical/hh_practical.json",
-                "https://raw.githubusercontent.com/tarelli/tutorials/master/1_hh_exercises/hh_exercises.json"
+                "https://raw.githubusercontent.com/mattearnshaw/tutorials/development/1_hh_intro/hh_intro.json",
+                "https://raw.githubusercontent.com/mattearnshaw/tutorials/development/1_hh_practical/hh_practical.json",
+                "https://raw.githubusercontent.com/mattearnshaw/tutorials/development/1_hh_exercises/hh_exercises.json"
               ],
               "componentSpecific": {
-                "activeTutorial": "Open Source Brain Tutorial",
+                "activeTutorial": "Simulating the Action Potential with Hodgkin-Huxley Kinetics",
                 "currentStep": 0
               },
               "size": {
-                "height": 300,
-                "width": 350
+                "height": 700,
+                "width": 750
               },
               "position": {
                 "left": "50%",
-                "top": "50%"
+                "top": "10%"
               }
             }
           }

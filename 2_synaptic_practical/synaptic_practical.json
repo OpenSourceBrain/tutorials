@@ -3,10 +3,10 @@
     "height": "600",
     "width": "900",
     "steps": [{
-        "title": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
-        "content_url": "https://raw.githubusercontent.com/tarelli/tutorials/master/2_synaptic_practical/1.html"
+        "title": "Practical 1: Properties of a Morphologically Complex Neuron",
+        "content_url": "https://raw.githubusercontent.com/mattearnshaw/tutorials/development/2_synaptic_practical/1.html"
     }, {
-        "title": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
-        "content_url": "https://raw.githubusercontent.com/tarelli/tutorials/master/2_synaptic_practical/2.html"
+        "title": "Practical 1: Properties of a Morphologically Complex Neuron",
+        "content_url": "https://raw.githubusercontent.com/mattearnshaw/tutorials/development/2_synaptic_practical/2.html"
     }]
 }

@@ -19,6 +19,7 @@
       ],
       "description": "Synaptic integration tutorial",
       "id": 1,
+      "script": "/script.js",
       "lastModified": "1436102517799",
       "name": "Synaptic integration Tutorial",
       "status": "DESIGN",
@@ -31,12 +32,12 @@
               "isWidget": true,
               "dataType": "array",
               "data": [
-                "https://raw.githubusercontent.com/tarelli/tutorials/master/2_synaptic_practical/synaptic_practical.json",
-                "https://raw.githubusercontent.com/tarelli/tutorials/master/2_synaptic_exercises_A/synaptic_exercises_A.json",
-                "https://raw.githubusercontent.com/tarelli/tutorials/master/2_synaptic_exercises_B/synaptic_exercises_B.json"
+                "https://raw.githubusercontent.com/mattearnshaw/tutorials/development/2_synaptic_practical/synaptic_practical.json",
+                "https://raw.githubusercontent.com/mattearnshaw/tutorials/development/2_synaptic_exercises_A/synaptic_exercises_A.json",
+                "https://raw.githubusercontent.com/mattearnshaw/tutorials/development/2_synaptic_exercises_B/synaptic_exercises_B.json"
               ],
               "componentSpecific": {
-                "activeTutorial": "Open Source Brain Tutorial",
+		"title": "Practical 1: Properties of a Morphologically Complex Neuron",
                 "currentStep": 0
               },
               "size": {

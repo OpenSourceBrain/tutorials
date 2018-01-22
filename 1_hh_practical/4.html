@@ -1,9 +1,19 @@
+<script type="text/javascript" id="tutorialScript">
+  GEPPETTO.on(GEPPETTO.Events.Project_persisted, function() {
+      $('.tutorialForm input, .tutorialForm button').prop('disabled', false);
+  });
+
+  if (!Project.persisted) {
+      $('.tutorialForm input, .tutorialForm button').prop('disabled', true);
+  }
+</script>
+
 <div style="color:white">
 
 	When looking more carefully at the time courses of the K current and conductance you will notice that they start with a slow rise and speed up before settling down into the steady state value. 
 	In order to reproduce this shape, Hodgkin and Huxley had to raise the K activation variable n to the fourth power:
 
-	<img src='https://github.com/tarelli/tutorials/raw/master/1_hh_practical/eq1.png' class="invert center"></img>
+	<img src='https://github.com/mattearnshaw/tutorials/raw/development/1_hh_practical/eq1.png' class="invert center"></img>
 
 	Now, first make sure you are still recording the activation variables using the control panel before running the experiment.
 	<b>To record the activation variables for the potassium channel click <a onclick="Controlpanel1.openWithFilter('ACTIVE_STATE_VARIABLES', 'kChan.n');">here</a>.</b>
