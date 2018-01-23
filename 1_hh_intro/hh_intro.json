@@ -1,8 +1,11 @@
 {
-    "name": "A brief introduction to computational neuroscience",
+    "name": "Part 1: A brief introduction to computational neuroscience",
     "height": "600",
     "width": "900",
     "steps": [{
+        "title": " A brief introduction to computational neuroscience",
+        "content_url": "https://raw.githubusercontent.com/OpenSourceBrain/tutorials/development/1_hh_intro/0.html"
+    }, {
         "title": " A brief introduction to computational neuroscience",
         "content_url": "https://raw.githubusercontent.com/OpenSourceBrain/tutorials/development/1_hh_intro/1.html"
     }, {

@@ -69,7 +69,7 @@
                 "https://raw.githubusercontent.com/OpenSourceBrain/tutorials/development/1_hh_exercises/hh_exercises.json"
               ],
               "componentSpecific": {
-                "activeTutorial": "Simulating the Action Potential with Hodgkin-Huxley Kinetics",
+                "activeTutorial": "Part 1: A brief introduction to computational neuroscience",
                 "currentStep": 0
               },
               "size": {
