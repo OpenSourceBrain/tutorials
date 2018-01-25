@@ -1,5 +1,20 @@
-<div style="color:white">
+<script type="text/javascript" id="tutorialScript">
+  document.getElementById('toc_practical').onclick = function() {
+      GEPPETTO.Tutorial.goToChapter('Part 2: Simulating the Action Potential with Hodgkin-Huxley Kinetics');
+  };
+  document.getElementById('toc_exercises').onclick = function() {
+      GEPPETTO.Tutorial.goToChapter('Part 3: Hodgkin-Huxley Exercises');
+  };
+</script>
+<div style="color:white; margin: 2em 3em 0 3em; font-size: 1.3em;">
   <p>Welcome to the Hodgkin Huxley Tutorial.</p>
   <p>To get started with a brief introduction to computational neuroscience, follow the arrows below.</p>
-  <p>Once you have completed this part, click the <i class="fa fa-leanpub"></i> icon in the top-left corner of this window to move onto the practicals.</p>
+  <p>Use the <i class="fa fa-leanpub"></i> icon in the top-left corner of this window to access the table of contents at any time.</p>
+  <br>
+  <h2>Table of Contents</h2>
+  <ol>
+    <li>(You are here) Brief introduction to Computational Neuroscience</li>
+    <li><a id="toc_practical">Practical: Simulating the Action Potential with Hodgkin-Huxley Kinetics</a></li>
+    <li><a id="toc_exercises">Exercises</a></li>
+  </ol>
 </div>
