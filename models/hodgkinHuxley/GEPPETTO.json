@@ -23,7 +23,8 @@
               "HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.gDensity",
               "HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.gDensity",
               "HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.iDensity",
-              "HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.iDensity"
+              "HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.iDensity",
+              "HHTutorial.hhpop[0].IClamp.i"
           ]
         }
       ],
