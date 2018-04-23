@@ -9,6 +9,7 @@
     <button class="btn" id="changeCurrent" onclick="quickExperiment('IClamp',
         {
             _vActive:{'Model.neuroml.hhneuron.vClamp.active':0},
+            _IDuration:{'Model.neuroml.hhneuron.IClamp.duration':25},
             i:{'Model.neuroml.hhneuron.IClamp.amplitude':$('#currentValue').val()},
             k:{'Model.neuroml.hhneuron.biophysics.membraneProperties.kChans.condDensity':$('#kValue').val()},
             na:{'Model.neuroml.hhneuron.biophysics.membraneProperties.naChans.condDensity':$('#naValue').val()}
