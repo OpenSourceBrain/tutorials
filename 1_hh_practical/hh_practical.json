@@ -4,6 +4,9 @@
     "width": "900",
     "steps": [{
         "title": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
+        "content_url": "https://raw.githubusercontent.com/OpenSourceBrain/tutorials/development/1_hh_practical/0.html"
+    }, {
+        "title": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
         "content_url": "https://raw.githubusercontent.com/OpenSourceBrain/tutorials/development/1_hh_practical/1.html"
     }, {
         "title": "Practical 1: Simulating the Action Potential with Hodgkin-Huxley Kinetics",
