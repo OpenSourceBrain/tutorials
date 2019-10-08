@@ -3,10 +3,10 @@
   'HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.m.q': true,
   'HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.h.q': true,
   'HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.kChan.n.q': true,
-  'HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.gDensity': true,
-  'HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.gDensity': true,
-  'HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.iDensity': true,
-  'HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.iDensity': true
+  'HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.gDensity': false,
+  'HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.gDensity': false,
+  'HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.iDensity': false,
+  'HHTutorial.hhpop[0].biophysics.membraneProperties.kChans.iDensity': false
   }
   document.getElementById('actVars').onclick = function() {
       var actVars = ['HHTutorial.hhpop[0].biophysics.membraneProperties.naChans.naChan.m.q',
@@ -62,18 +62,13 @@
   }
   </script>
 <div>
-    <p>Below you will see a selection of parameters to alter to try out this model. You can modify the parameters and run the simulation by pressing the "Try it!" button. Every time you press "Try it!" a new <strong>experiment</strong>> will be created. You can find all the experiments that you execute in the tab at the bottom of the browser.</p>
+    <p>Below you will see a selection of parameters to alter to try out this model. You can modify the parameters and run the simulation by pressing the "Try it!" button. Every time you press "Try it!" a new <strong>experiment</strong> will be created. </p>
 
   <p>After the experiment has finished running, plots will be displayed for the membrane potential and activation variables m, h and n, and optionally the conductances/currents through the Na and K channels.</p>
 
   <p>In this step the model is in IClamp mode which means you are injecting a current into the cell, you can vary the amplitude of the injected current below.
     A greater amplitude of injection should lead to a higher firing rate.</p>
   
-    <p>When the simulation is set running the status icon in the Experiments tab 
-        below will change from <i class="fa fa-circle" style="color:#ff5a02"></i> 
-        (pre simulation; experiment design phase), to <i class="fa fa-circle" style="color:#0199e8"></i> 
-        (in the queue on our servers), to <i class="fa fa-circle" style="color:#ffcc00"></i> (running), 
-        and finally to <i class="fa fa-circle" style="color:#649615"></i> (completed).</p>
 
     <div class="tutorialForm center">
         <div class="tutorialLabel">Input current (nA)</div> <input id="currentValue" type="text" value="0.002"></input></br>
